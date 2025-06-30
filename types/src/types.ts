@@ -120,6 +120,11 @@ export interface AgentInterface {
  */
 export interface AgentCard {
   /**
+   * The version of the A2A protocol this agent supports.
+   * @default "0.2.5"
+   */
+  protocolVersion: string;
+  /**
    * Human readable name of the agent.
    * @TJS-examples ["Recipe Agent"]
    */
