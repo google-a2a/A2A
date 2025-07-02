@@ -2,6 +2,17 @@
  * @title A2A
  */
 
+/**
+ * Well-known URIs used in the A2A protocol.
+ * https://datatracker.ietf.org/doc/html/rfc8615
+ */
+export interface WellKnownUris {
+  /**
+   * The well-known URI at which an AgentCard should be hosted.
+   */
+  AGENT_CARD_WELL_KNOWN_URI: "/.well-known/agent.json";
+}
+
 // --8<-- [start:AgentProvider]
 /**
  * Represents the service provider of an agent.
@@ -117,6 +128,9 @@ export interface AgentInterface {
  * - Skills: A set of capabilities the agent can perform
  * - Default modalities/content types supported by the agent.
  * - Authentication requirements
+ *
+ * The AgentCard SHOULD be hosted at the well-known URI specified by the
+ * `WellKnownUris.AGENT_CARD_WELL_KNOWN_URI` constant ("/.well-known/agent.json").
  */
 export interface AgentCard {
   /**
